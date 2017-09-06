@@ -12,4 +12,8 @@ public class TestService {
         return "Hello " + this.name;
     }
 
+    public String say(String what){
+        return "say : " + what;
+    }
+
 }

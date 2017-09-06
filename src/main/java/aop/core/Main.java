@@ -19,6 +19,7 @@ public class Main implements CommandLineRunner {
 
     public void run(String... strings) throws Exception {
         System.out.println(testService.getHelloMessage());
+        System.out.println(testService.say("what are you saying??"));
     }
 
     public static void main(String[] args){

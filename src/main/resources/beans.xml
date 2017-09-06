@@ -8,6 +8,7 @@
     <aop:config>
         <aop:aspect ref="serviceMonitor">
             <aop:around method="around" pointcut="execution(* aop.service.TestService.*(..))"/>
+            <aop:before method="before" pointcut="execution(* aop.service.TestService.say(String)) and args(what)"/>
         </aop:aspect>
     </aop:config>
 </beans>

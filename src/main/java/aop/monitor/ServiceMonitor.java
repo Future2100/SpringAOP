@@ -12,14 +12,18 @@ public class ServiceMonitor {
 
     @Around("execution(* aop.service.*Service.*(..))")
     public Object around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
-        System.out.println("before");
+        System.out.println("around before");
 
         Object str = proceedingJoinPoint.proceed();
 
 
-        System.out.println("after");
+        System.out.println("around after");
 
         return str;
+    }
+
+    public void before(String what){
+        System.out.println("before say : " + what);
     }
 
 }
